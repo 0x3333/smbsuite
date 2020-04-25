@@ -4,15 +4,19 @@ A suite of Apps to easily manage `samba` file server from the Web.
 ## Motivation
 I quite often implement a `samba` file server using `Share` security, this is the easiest way to implement `samba`, but you have to manage it all by hand, and this can be quite a pain.
 
-The idea of this project is to create a foundation to build simple apps to manage this tasks using a Web browser. Initially I'll implement `smbpasswd` for users and `ACL` permissions management. But new Issues/PR can be created to ask/implement new features.
+The idea of this project is to create a foundation to build simple apps to manage this tasks using a Web browser. Initially I'll implement `smbpasswd` for users(*See Update 1 below*) and `ACL` permissions management. But new Issues/PR can be created to ask/implement new features.
 
 ## Plan
 
-I don't know yet how these "apps" will be implemented, but I will create a RESTful server using `Go-lang`.
+I don't know yet how these "apps" will be implemented, but I will create a RESTful server using [`rust-lang`](https://www.rust-lang.org/).
 Some small binaries will be created to make a bridge between the REST API and the samba executables,
 like `smbpasswd`, 'getfacl', 'setfacl', to sanitize and validate the input to these programs.
 
 The UI will be implemented probably using `Vue.js` and Bootstrap v4.
+
+## Update 1
+
+I've no spare time to work on this, but I already have a project that will change samba's user's passwords using a webpage, check it out: [smbpasswd-web](https://github.com/0x3333/smbpasswd-web).
 
 ## License
 
